@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C2477CF200D3CD6001D7C77 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 4C2477CE200D3CD6001D7C77 /* README.md */; };
+		4C2477D2200D3CE9001D7C77 /* Badger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2477D0200D3CE9001D7C77 /* Badger.swift */; };
+		4C2477D3200D3CE9001D7C77 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2477D1200D3CE9001D7C77 /* Extensions.swift */; };
 		4C6C4DE1200D3BF80013F74B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6C4DE0200D3BF80013F74B /* AppDelegate.swift */; };
 		4C6C4DE3200D3BF80013F74B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6C4DE2200D3BF80013F74B /* ViewController.swift */; };
 		4C6C4DE6200D3BF80013F74B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C6C4DE4200D3BF80013F74B /* Main.storyboard */; };
@@ -16,6 +19,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4C2477CE200D3CD6001D7C77 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		4C2477D0200D3CE9001D7C77 /* Badger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Badger.swift; sourceTree = "<group>"; };
+		4C2477D1200D3CE9001D7C77 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		4C6C4DDD200D3BF80013F74B /* Badger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Badger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C6C4DE0200D3BF80013F74B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4C6C4DE2200D3BF80013F74B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -40,6 +46,7 @@
 		4C6C4DD4200D3BF80013F74B = {
 			isa = PBXGroup;
 			children = (
+				4C2477CE200D3CD6001D7C77 /* README.md */,
 				4C6C4DDF200D3BF80013F74B /* Badger */,
 				4C6C4DDE200D3BF80013F74B /* Products */,
 			);
@@ -56,10 +63,12 @@
 		4C6C4DDF200D3BF80013F74B /* Badger */ = {
 			isa = PBXGroup;
 			children = (
+				4C2477D1200D3CE9001D7C77 /* Extensions.swift */,
+				4C2477D0200D3CE9001D7C77 /* Badger.swift */,
 				4C6C4DE0200D3BF80013F74B /* AppDelegate.swift */,
 				4C6C4DE2200D3BF80013F74B /* ViewController.swift */,
-				4C6C4DE4200D3BF80013F74B /* Main.storyboard */,
 				4C6C4DEA200D3BF80013F74B /* Assets.xcassets */,
+				4C6C4DE4200D3BF80013F74B /* Main.storyboard */,
 				4C6C4DEC200D3BF80013F74B /* LaunchScreen.storyboard */,
 				4C6C4DEF200D3BF80013F74B /* Info.plist */,
 				4C6C4DE7200D3BF80013F74B /* Badger.xcdatamodeld */,
@@ -128,6 +137,7 @@
 			files = (
 				4C6C4DEE200D3BF80013F74B /* LaunchScreen.storyboard in Resources */,
 				4C6C4DEB200D3BF80013F74B /* Assets.xcassets in Resources */,
+				4C2477CF200D3CD6001D7C77 /* README.md in Resources */,
 				4C6C4DE6200D3BF80013F74B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -139,6 +149,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C2477D3200D3CE9001D7C77 /* Extensions.swift in Sources */,
+				4C2477D2200D3CE9001D7C77 /* Badger.swift in Sources */,
 				4C6C4DE3200D3BF80013F74B /* ViewController.swift in Sources */,
 				4C6C4DE1200D3BF80013F74B /* AppDelegate.swift in Sources */,
 				4C6C4DE9200D3BF80013F74B /* Badger.xcdatamodeld in Sources */,
@@ -281,6 +293,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3PQF87SAEW;
 				INFOPLIST_FILE = Badger/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.byteslinger.Badger;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -296,6 +309,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3PQF87SAEW;
 				INFOPLIST_FILE = Badger/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.byteslinger.Badger;
 				PRODUCT_NAME = "$(TARGET_NAME)";
