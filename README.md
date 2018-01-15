@@ -31,23 +31,23 @@ I selected my iPhones to build and deploy to.  I did not try to test in the Xcod
 ## Code Highlights
 There are several "tricks" necessary for the Badger App to work.  I spelunked in [Stack Overflow](http://stackoverflow.com) to solve some of them, others I developed myself over time:
 
-[Extensions.swift](./Extensions.swift) - the "Swifty" way
+[Extensions.swift](./Badger/Extensions.swift) - the "Swifty" way
 * Return the app icon image
 * Create a Notification Attachment containing an image (... the app icon image ...)
 
-[ViewController.swift](./ViewController.swift) - for display and inits Badger object
+[ViewController.swift](./Badger/ViewController.swift) - for display and inits Badger object
 * Running in the background (see startLocationManager() function)
 * Go to background (save wear and tear on my home buttons (see goToBackground() function)
 * Run background function with a Timer (see incrementCounter() function)
 * Display simple alert popup (see showAlert() function)
 
-[Badger.swift](./Badger.swift) - handle notifications badge setting in the background
+[Badger.swift](./Badger/Badger.swift) - handle notifications badge setting in the background
 * Handling foreground/background transitions (NotificationCenter observers - see viewDidLoad() function)
 * Set and Clear the App Icon Badge (UIApplication.shared.applicationIconBadgeNumber variable)
 * Run background badge update with a Timer (see startBadgeUpdate() function)
 * Local Notifications (see requestNoficationAuthorization() and notify() functions)
 
-[Info.plist](./Info.plist)
+[Info.plist](./Badger/Info.plist)
 
 There are a few things required in the Info.plist file to get the location services working properly on the iPhone 5 and the iPhone 6+:
 
