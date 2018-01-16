@@ -57,6 +57,37 @@ There are a few things required in the Info.plist file to get the location servi
 * UIBackgroundModes - **location**
 * UIRequiredDeviceCapabilities - armv7, **location-services** (NOTE:  **gps** was not necessary...)
 
+## Usage
+* Copy Badger.swift into your project folder
+* Instantiate a Badger object (in **ViewDidLoad()** or other accessible object)
+
+      var badger = Badger()
+
+* Configure your Badger object
+
+      badger.enableAlert = true  // default = true, Notification will popup
+      badger.enableUpdate = true // default = true, App Icon badge is set and updated 
+      badger.enableSound = true  // default = true, set to false if it's annoying
+      badger.updateFrequency = 2 // default = 1, update badge every N seconds
+      badger.setTitle("Oy!")     // default = "Alert"
+      badger.setSubTitle("Vey!") // default = nil
+      badger.setBody("App is running in the background.\n\n" +
+                 "Please watch your battery usage.") // set this as you please
+            
+      // in your background processing loop, set the badge to an integer
+      self.badge.setBadge(42)         // default = 0 (which is NO badge)
+            
+* Build and deploy your project! That's all you need to do.  
+
+* **NOTE**:  For iOS 10.x and previous, you **MUST** set the body to something or no message will appear.
+
+* Minimum usage:
+
+      var badger = Badger()
+      badger.setBadge(1)    // sets the app icon badge to 1
+      
+The default notification message body will be set to "YOUR_APP_NAME is running in the background.".
+
 ## Bugs
 
 I could not figure out a way to consistently clear the App Icon Badge when the app terminates.  If the app was in the foreground it often does work, but if the app is in the background, it very rarely works.  I posted a question on StackOverflow.com and the response was that it's not possible.  I tried several different approaches.  The appWillTerminate functionality does not seem to allow you to set the appIconBadge variable to 0 (zero) before the app terminates.  You can try, but it does not work.
@@ -67,15 +98,7 @@ I could not figure out a way to consistently clear the App Icon Badge when the a
 
 ## License
 
-This project is licensed under the MIT License:
-
-Copyright 2018, ByteSlinger
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+This project is licensed under the MIT License: https://opensource.org/licenses/MIT
 
 ## Acknowledgments
 
